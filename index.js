@@ -23,4 +23,4 @@ app.use(cors());
 // route Middlewares
 app.use("/api/products", productRoutes);
 
-app.listen(4000, () => console.log("server up and runing on port 4000!"));
+app.listen(4000, () => console.log("server up and runing on port 4000 !"));
