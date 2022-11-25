@@ -8,6 +8,7 @@ router.get("/user", productController.product_all);
 router.get("/jobs", productController.product_all1);
 router.get("/userjob", productController.product_all2);
 router.get("/produ", productController.produ);
+router.get("/produe/:username/:password", productController.produe);
 router.get("/:productId", productController.product_details);
 router.put("/:productId", productController.product_update);
 router.delete("/:productId", productController.product_delete);
