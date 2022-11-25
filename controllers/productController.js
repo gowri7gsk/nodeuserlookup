@@ -58,6 +58,21 @@ const produ = async (req, res) => {
     }
 };
 
+
+
+const produe = async (req, res) => {
+  try {
+      const prosd = await auser.find({$and: [{username: {$eq: req.params.username}},{password: {$eq: req.params.password}}]});
+      return res.json(prosd);
+    } catch (error) {
+      res.json({ message: "wrong user login " });
+    }
+};
+
+
+
+
+
 const product_create1 = async (req, res) => {
   const product = new auser({
       username: req.body.username,
@@ -152,6 +167,7 @@ module.exports = {
     product_all1,
     product_all2,
     produ,
+    produe,
     product_details, 
     product_create, 
     product_create1,
